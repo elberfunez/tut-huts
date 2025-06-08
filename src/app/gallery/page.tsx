@@ -8,7 +8,7 @@ interface GalleryImage {
     altText: string;
 };
 
-export const images : GalleryImage[] = [
+const galleryImages : GalleryImage[] = [
     { source: '/images/TutHutsSign.jpg', altText: 'RV Park entrance' },
     { source: '/images/trailerex1.jpg', altText: 'Trailers parked with outdoor nature shown' },
     { source: '/images/laundryInside.jpg', altText: 'On site Laundry room open 24 hours' },
@@ -23,7 +23,7 @@ export default function Gallery() {
       </h1>
 
       <div className="columns-1 sm:columns-2 md:columns-3 gap-4 space-y-4">
-        {images.map((imgObj) => (
+        {galleryImages.map((imgObj) => (
           <div
             key={imgObj.source}
             className="overflow-hidden rounded-xl shadow-md border border-gray-200 break-inside-avoid"
