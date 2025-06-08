@@ -8,7 +8,7 @@ interface GalleryImage {
     altText: string;
 };
 
-export const galleryImages : GalleryImage[] = [
+const galleryImages : GalleryImage[] = [
     { source: '/images/TutHutsSign.jpg', altText: 'RV Park entrance' },
     { source: '/images/trailerex1.jpg', altText: 'Trailers parked with outdoor nature shown' },
     { source: '/images/laundryInside.jpg', altText: 'On site Laundry room open 24 hours' },
