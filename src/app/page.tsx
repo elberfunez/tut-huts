@@ -27,18 +27,16 @@ export default function HomePage() {
         </button>
       </a>
       </p>
-      <div className="mt-4">
+      <div className="w-full max-w-3xl aspect-video mt-4">
         <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3320.6101273160116!2d-87.2488376235454!3d33.667262573304576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88888c99902c87c5%3A0x6d15c597443531ff!2s12465%20Tutwiler%20Rd%2C%20Parrish%2C%20AL%2035580!5e0!3m2!1sen!2sus!4v1749329089559!5m2!1sen!2sus"
-        width="600"
-        height="450"
-        style={{ border: 0 }}
-        allowFullScreen
-        loading="lazy"
-        referrerPolicy="no-referrer-when-downgrade"
-      >
-
-      </iframe>
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3320.6101273160116!2d-87.2488376235454!3d33.667262573304576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88888c99902c87c5%3A0x6d15c597443531ff!2s12465%20Tutwiler%20Rd%2C%20Parrish%2C%20AL%2035580!5e0!3m2!1sen!2sus!4v1749329089559!5m2!1sen!2sus"
+          className="w-full h-full rounded-md shadow-lg"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        >
+        </iframe>
       </div>
       
     </main>
