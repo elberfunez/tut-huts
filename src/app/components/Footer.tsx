@@ -13,12 +13,27 @@ export default function Footer() {
             alt="Tut Huts RV Park Logo"
             width={300}
             height={300}
-            className="w-40 h-auto object-contain translate-x-4"
+            className="w-24 h-auto object-contain translate-x-2"
           />
         </div>
         <div className="mb-6">
-          <p className="text-lg font-medium mb-2">{config.PARK_PHONE_NUMBER}</p>
-          <p className="text-sm">{config.PARK_ADDRESS}</p>
+          <p className="text-lg font-medium mb-2">
+            <a
+              href={`tel:${config.PARK_PHONE_NUMBER}`}
+              className="hover:underline underline-offset-4 transition"
+            >
+              {config.PARK_PHONE_NUMBER}
+            </a>
+          </p>
+          <p className="text-sm">
+            <a
+              href="https://www.google.com/maps/dir//Tut+Huts+RV+Park,+Tutwiler+Road,+Parrish,+AL/@33.6670018,-87.2873456,13z/data=!4m9!4m8!1m0!1m5!1m1!1s0x88888daf527c4815:0xb9b16721e98e5a21!2m2!1d-87.2461461!2d33.6670086!3e0?entry=ttu&g_ep=EgoyMDI1MDYwNC4wIKXMDSoASAFQAw%3D%3D"
+              className="hover:underline underline-offset-4 transition"
+              target="_blank"
+            >
+              {config.PARK_ADDRESS}
+            </a>
+          </p>
         </div>
         <div className="flex justify-center space-x-6 mb-6">
           <a

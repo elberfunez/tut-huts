@@ -1,4 +1,3 @@
-// src/app/amenities/page.tsx
 import Image from 'next/image';
 
 export const metadata = {

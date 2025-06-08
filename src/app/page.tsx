@@ -17,9 +17,15 @@ export default function HomePage() {
         southern hospitality.
       </p>
       <p className="text-center text-blue-600 font-semibold mt-4">
+        <a
+          href={config.RESERVATION_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
         <button className="bg-[#31b0b4] text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-[#2a9ba0] hover:scale-105 transition-all duration-300 transform active:bg-[#288e93] focus:outline-none focus:ring-2 focus:ring-[#31b0b4]">
           Book Now
-      </button>
+        </button>
+      </a>
       </p>
       <div className="mt-4">
         <iframe

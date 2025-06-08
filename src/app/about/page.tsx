@@ -1,4 +1,5 @@
 import Image from "next/image";
+import * as config from '../../../config';
 
 export const metadata = {
   title: "About Tut Huts RV Park",
@@ -58,7 +59,7 @@ export default function AboutPage() {
         {/* Call to Action */}
         <div className="text-center">
           <a
-            href="https://reservations.birminghamsouthrvpark.com"
+            href={config.RESERVATION_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-[#31b0b4] text-white font-bold py-3 px-10 rounded-full shadow-md hover:bg-[#2a9ba0] hover:-translate-y-1 transition-transform duration-300"
