@@ -1,8 +1,10 @@
 import Image from 'next/image';
 
 export const metadata = {
-    title: 'title'
+  title: 'Tut Huts RV Park Gallery Images',
+  description: 'Images of park, landscape, park amenities and features.',
 };
+
 interface GalleryImage {
     source: string;
     altText: string;
