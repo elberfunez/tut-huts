@@ -8,12 +8,14 @@ import { RESERVATION_URL } from '../../../config';
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const closeMenu = () => setIsOpen(false);
+
   return (
     <nav className="sticky top-0 z-50 bg-teal-50 border-b border-teal-100 shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-            <Link href="/" className="flex items-center space-x-2">
+          <Link href="/" className="flex items-center space-x-2">
             <Image
               src="/images/entire_logo_transparent.png"
               alt="Tut Huts Logo"
@@ -22,7 +24,6 @@ export default function Navbar() {
               priority
             />
           </Link>
-
 
           {/* Desktop Nav */}
           <div className="hidden md:flex space-x-6">
@@ -67,32 +68,41 @@ export default function Navbar() {
       {/* Mobile Nav */}
       {isOpen && (
         <div className="md:hidden px-4 pb-4 space-y-2">
-          <NavLinks mobile />
+          <NavLinks mobile closeMenu={closeMenu} />
         </div>
       )}
     </nav>
   );
 }
 
-function NavLinks({ mobile = false }: { mobile?: boolean }) {
-  const linkStyle = mobile
-  ? 'block text-teal-800 hover:text-teal-600 hover:underline underline-offset-4 font-medium'
-    : 'text-teal-800 hover:text-teal-600 hover:underline underline-offset-4 transition font-medium';
 
+function NavLinks({
+  mobile = false,
+  closeMenu,
+}: {
+  mobile?: boolean;
+  closeMenu?: () => void;
+}) {
+  const linkStyle = mobile
+    ? "block text-teal-800 hover:text-teal-600 hover:underline underline-offset-4 font-medium"
+    : "text-teal-800 hover:text-teal-600 hover:underline underline-offset-4 transition font-medium";
+
+  const handleClick = () => {
+    if (mobile && closeMenu) closeMenu();
+  };
 
   return (
     <>
-      <Link href="/" className={linkStyle}>
+      <Link href="/" className={linkStyle} onClick={handleClick}>
         Home
       </Link>
-      <Link href="/rates" className={linkStyle}>
+      <Link href="/rates" className={linkStyle} onClick={handleClick}>
         Rates
       </Link>
-      <Link href="/gallery" className={linkStyle}>
+      <Link href="/gallery" className={linkStyle} onClick={handleClick}>
         Gallery
       </Link>
-      
-      <Link href="/about" className={linkStyle}>
+      <Link href="/about" className={linkStyle} onClick={handleClick}>
         About
       </Link>
       <a
@@ -100,10 +110,11 @@ function NavLinks({ mobile = false }: { mobile?: boolean }) {
         target="_blank"
         rel="noopener noreferrer"
         className={linkStyle}
+        onClick={handleClick}
       >
         Reservations
       </a>
-      <Link href="/contact" className={linkStyle}>
+      <Link href="/contact" className={linkStyle} onClick={handleClick}>
         Contact
       </Link>
     </>
