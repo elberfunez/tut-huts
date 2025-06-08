@@ -1,7 +1,13 @@
 import { RESERVATION_URL } from '../../../config';
+
 export default function RatesPage() {
   const rates = [
-    { nightly: "$40", weekly: "$175", monthly: "$550", utilities: "INCLUDED!" },
+    {
+      nightly: "$40",
+      weekly: "$175",
+      monthly: "$550",
+      utilities: "INCLUDED!",
+    },
   ];
 
   return (
@@ -11,40 +17,78 @@ export default function RatesPage() {
           Rates
         </h1>
         <p className="text-center text-lg md:text-xl mb-12 max-w-2xl mx-auto animate-fade-in-delay">
-          Discover unbeatable value. <br /> Flexible Length Stays with 30 / 50A Service, sewage hookup, and city water. 
+          Discover unbeatable value. <br /> Flexible Length Stays with 30 / 50A
+          Service, sewage hookup, and city water.
         </p>
 
-        <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 md:p-8 shadow-2xl animate-slide-up">
-          <div className="overflow-x-auto">
-            <table className="w-full text-center">
-              <thead>
-                <tr className="border-b border-white/20">
-                  <th className="py-3 px-4 text-2xl font-semibold">Nightly</th>
-                  <th className="py-3 px-4 text-2xl font-semibold">Weekly</th>
-                  <th className="py-3 px-4 text-2xl font-semibold">Monthly</th>
-                  <th className="py-3 px-4 text-2xl font-semibold">Utilities</th>
+        {/* Desktop Table */}
+        <div className="hidden sm:block bg-white/10 backdrop-blur-md rounded-xl p-6 md:p-8 shadow-2xl animate-slide-up">
+          <table className="w-full table-fixed text-center text-base md:text-lg">
+            <colgroup>
+              <col className="w-1/4" />
+              <col className="w-1/4" />
+              <col className="w-1/4" />
+              <col className="w-1/4" />
+            </colgroup>
+            <thead>
+              <tr className="border-b border-white/20">
+                <th className="py-3 px-2 font-semibold">Nightly</th>
+                <th className="py-3 px-2 font-semibold">Weekly</th>
+                <th className="py-3 px-2 font-semibold">Monthly</th>
+                <th className="py-3 px-2 font-semibold">Utilities</th>
+              </tr>
+            </thead>
+            <tbody>
+              {rates.map((rate, index) => (
+                <tr
+                  key={index}
+                  className="border-b border-white/10 hover:bg-white/5 transition-colors"
+                >
+                  <td className="py-4 px-2 text-green-400">{rate.nightly}</td>
+                  <td className="py-4 px-2 text-green-400">{rate.weekly}</td>
+                  <td className="py-4 px-2 text-green-400">{rate.monthly}</td>
+                  <td className="py-4 px-2 text-green-400">{rate.utilities}</td>
                 </tr>
-              </thead>
-              <tbody>
-                {rates.map((rate, index) => (
-                  <tr
-                    key={index}
-                    className="border-b border-white/10 hover:bg-white/5 transition-colors duration-200"
-                  >
-                    <td className="py-6 px-4 text-2xl text-green-400">{rate.nightly}</td>
-                    <td className="py-6 px-4 text-2xl text-green-400">{rate.weekly}</td>
-                    <td className="py-6 px-4 text-2xl text-green-400">{rate.monthly}</td>
-                    <td className="py-6 px-4 text-2xl text-green-400">{rate.utilities}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+              ))}
+            </tbody>
+          </table>
           <p className="text-sm text-gray-300 mt-6">
-            Rates are all-inclusive and subject to availability. Additional fees may apply for extra services. Contact us for seasonal discounts!
+            Rates are all-inclusive and subject to availability. Additional fees
+            may apply for extra services. Contact us for seasonal discounts!
           </p>
         </div>
 
+        {/* Mobile Stacked Cards */}
+        <div className="sm:hidden space-y-6 animate-slide-up">
+          {rates.map((rate, idx) => (
+            <div
+              key={idx}
+              className="bg-white/10 backdrop-blur-md rounded-xl p-6 shadow-2xl space-y-2"
+            >
+              <p>
+                <span className="font-semibold">Nightly: </span>
+                <span className="text-green-400">{rate.nightly}</span>
+              </p>
+              <p>
+                <span className="font-semibold">Weekly: </span>
+                <span className="text-green-400">{rate.weekly}</span>
+              </p>
+              <p>
+                <span className="font-semibold">Monthly: </span>
+                <span className="text-green-400">{rate.monthly}</span>
+              </p>
+              <p>
+                <span className="font-semibold">Utilities: </span>
+                <span className="text-green-400">{rate.utilities}</span>
+              </p>
+              <p className="text-sm text-gray-300 pt-2">
+                Rates are all-inclusive and subject to availability.
+              </p>
+            </div>
+          ))}
+        </div>
+
+        {/* CTA Button */}
         <div className="text-center mt-12">
           <a
             href={RESERVATION_URL}

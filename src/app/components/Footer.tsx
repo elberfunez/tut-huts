@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import { RESERVATION_URL } from "../../../config";
+import * as config from "../../../config";
+
 
 export default function Footer() {
   return (
@@ -12,16 +13,31 @@ export default function Footer() {
             alt="Tut Huts RV Park Logo"
             width={300}
             height={300}
-            className="w-40 h-auto object-contain translate-x-4"
+            className="w-24 h-auto object-contain translate-x-2"
           />
         </div>
         <div className="mb-6">
-          <p className="text-lg font-medium mb-2">(202) 530-0408</p>
-          <p className="text-sm">12465 Tutwiler Rd, Parrish, AL 35580</p>
+          <p className="text-lg font-medium mb-2">
+            <a
+              href={`tel:${config.PARK_PHONE_NUMBER}`}
+              className="hover:underline underline-offset-4 transition"
+            >
+              {config.PARK_PHONE_NUMBER}
+            </a>
+          </p>
+          <p className="text-sm">
+            <a
+              href="https://www.google.com/maps/dir//Tut+Huts+RV+Park,+Tutwiler+Road,+Parrish,+AL/@33.6670018,-87.2873456,13z/data=!4m9!4m8!1m0!1m5!1m1!1s0x88888daf527c4815:0xb9b16721e98e5a21!2m2!1d-87.2461461!2d33.6670086!3e0?entry=ttu&g_ep=EgoyMDI1MDYwNC4wIKXMDSoASAFQAw%3D%3D"
+              className="hover:underline underline-offset-4 transition"
+              target="_blank"
+            >
+              {config.PARK_ADDRESS}
+            </a>
+          </p>
         </div>
         <div className="flex justify-center space-x-6 mb-6">
           <a
-            href="https://www.facebook.com/tuthuts/"
+            href={config.FACEBOOK_URL_LINK}
             target="_blank"
             rel="noopener noreferrer"
             className="hover:opacity-80 transition-opacity"
@@ -43,7 +59,7 @@ export default function Footer() {
             Contact
           </Link>{""}|{" "}
           <a
-            href={RESERVATION_URL}
+            href={config.RESERVATION_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-gray-300 transition-colors"
@@ -52,7 +68,7 @@ export default function Footer() {
           </a>
         </div>
         <p className="text-xs opacity-80">
-          © 2025 Tut Huts RV Park. All Rights Reserved.
+          © {new Date().getFullYear()} Tut Huts RV Park. All Rights Reserved.
         </p>
       </div>
     </footer>
