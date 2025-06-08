@@ -12,9 +12,23 @@ interface GalleryImage {
 
 const galleryImages : GalleryImage[] = [
     { source: '/images/TutHutsSign.jpg', altText: 'RV Park entrance' },
-    { source: '/images/trailerex1.jpg', altText: 'Trailers parked with outdoor nature shown' },
     { source: '/images/laundryInside.jpg', altText: 'On site Laundry room open 24 hours' },
+    { source: '/images/drone3.png', altText: 'Aereal view of the Park' },
+    { source: '/images/drone4.png', altText: 'Aereal view of the Park overview' },
     { source: '/images/LaundrySign_WithBuilding.jpg', altText: 'Laundry building entrance with parking' },
+    { source: '/images/Laundry1.jpg', altText: 'Washing Machines / Drying Machines' },
+    { source: '/images/LaundrySign_WithBuilding2.jpg', altText: 'On site Laundry room entrance' },
+    { source: '/images/sitelot1.jpg', altText: 'Tut huts rv park shown at sunset' },
+    { source: '/images/sitelot2.jpg', altText: 'Rv trailers backed in parked' },
+    { source: '/images/sitelot3.jpg', altText: 'RV parked with grill' },
+    { source: '/images/sitelot4.jpg', altText: 'Backed in parked with rv trailer attached to truck' },
+    { source: '/images/sitelot5.jpg', altText: 'Empty lot available shown for rent' },
+    { source: '/images/sitelot6.jpg', altText: 'Empty lot with shade available shown for rent' },
+    { source: '/images/sitelot7.jpg', altText: 'Concrete paved lot with RV parked' },
+    { source: '/images/sitelot8.jpg', altText: 'Lot shown close to forest and nature' },
+    { source: '/images/sitelot9.jpg', altText: 'Beautiful grass landscape' },
+    { source: '/images/sitelot10.jpg', altText: 'Parrish Alabama Beautiful trees and landscape around park' },
+    { source: '/images/asphalt_lot.jpg', altText: 'Asphalt lot available for rent' },
 ]
 
 export default function Gallery() {
