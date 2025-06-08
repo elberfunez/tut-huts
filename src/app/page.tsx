@@ -1,3 +1,5 @@
+import * as config from '../../config';
+
 export const metadata = {
   title: "Tut Huts RV Park – RV Camping in Walker County, Alabama",
   description:
@@ -10,7 +12,7 @@ export default function HomePage() {
       <h1 className="text-5xl font-bold text-center mb-6">Tut Huts RV Park</h1>
       <p className="text-lg text-center text-gray-700 max-w-2xl mb-4">
         Welcome to Tut Huts – your cozy RV destination located at{" "}
-        <strong>12465 Tutwiler Rd, Parrish, AL 35580</strong>. Nestled in Walker
+        <strong>{config.PARK_ADDRESS}</strong>. Nestled in Walker
         County, Alabama, our park offers full hookups, quiet surroundings, and
         southern hospitality.
       </p>

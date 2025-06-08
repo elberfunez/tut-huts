@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import { RESERVATION_URL } from "../../../config";
+import * as config from "../../../config";
+
 
 export default function Footer() {
   return (
@@ -16,12 +17,12 @@ export default function Footer() {
           />
         </div>
         <div className="mb-6">
-          <p className="text-lg font-medium mb-2">(202) 530-0408</p>
-          <p className="text-sm">12465 Tutwiler Rd, Parrish, AL 35580</p>
+          <p className="text-lg font-medium mb-2">{config.PARK_PHONE_NUMBER}</p>
+          <p className="text-sm">{config.PARK_ADDRESS}</p>
         </div>
         <div className="flex justify-center space-x-6 mb-6">
           <a
-            href="https://www.facebook.com/tuthuts/"
+            href={config.FACEBOOK_URL_LINK}
             target="_blank"
             rel="noopener noreferrer"
             className="hover:opacity-80 transition-opacity"
@@ -43,7 +44,7 @@ export default function Footer() {
             Contact
           </Link>{""}|{" "}
           <a
-            href={RESERVATION_URL}
+            href={config.RESERVATION_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-gray-300 transition-colors"
@@ -52,7 +53,7 @@ export default function Footer() {
           </a>
         </div>
         <p className="text-xs opacity-80">
-          © 2025 Tut Huts RV Park. All Rights Reserved.
+          © {new Date().getFullYear()} Tut Huts RV Park. All Rights Reserved.
         </p>
       </div>
     </footer>
