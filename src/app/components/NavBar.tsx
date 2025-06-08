@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { RESERVATION_URL } from '../../../config';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -84,6 +85,9 @@ function NavLinks({ mobile = false }: { mobile?: boolean }) {
       <Link href="/" className={linkStyle}>
         Home
       </Link>
+      <Link href="/rates" className={linkStyle}>
+        Rates
+      </Link>
       <Link href="/gallery" className={linkStyle}>
         Gallery
       </Link>
@@ -92,7 +96,7 @@ function NavLinks({ mobile = false }: { mobile?: boolean }) {
         About
       </Link>
       <a
-        href="https://www.campspot.com/"
+        href={RESERVATION_URL}
         target="_blank"
         rel="noopener noreferrer"
         className={linkStyle}

@@ -15,9 +15,12 @@ export default function HomePage() {
         southern hospitality.
       </p>
       <p className="text-center text-blue-600 font-semibold mt-4">
-        Reservations coming soon!
+        <button className="bg-[#31b0b4] text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-[#2a9ba0] hover:scale-105 transition-all duration-300 transform active:bg-[#288e93] focus:outline-none focus:ring-2 focus:ring-[#31b0b4]">
+          Book Now
+      </button>
       </p>
-      <iframe
+      <div className="mt-4">
+        <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3320.6101273160116!2d-87.2488376235454!3d33.667262573304576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88888c99902c87c5%3A0x6d15c597443531ff!2s12465%20Tutwiler%20Rd%2C%20Parrish%2C%20AL%2035580!5e0!3m2!1sen!2sus!4v1749329089559!5m2!1sen!2sus"
         width="600"
         height="450"
@@ -25,7 +28,11 @@ export default function HomePage() {
         allowFullScreen
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
-      ></iframe>
+      >
+
+      </iframe>
+      </div>
+      
     </main>
   );
 }

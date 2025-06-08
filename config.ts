@@ -1,0 +1,1 @@
+export const RESERVATION_URL: string = 'https://www.campspot.com/';
