@@ -8,6 +8,7 @@ export default function ContactForm() {
     lastName: '',
     email: '',
     message: '',
+    _honey: '', // Honeypot field
   });
 
   const [errors, setErrors] = useState({
@@ -50,12 +51,11 @@ export default function ContactForm() {
     return valid;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  if (!validate()) {
     e.preventDefault();
-    if (validate()) {
-      alert('Form submitted!');
-    }
-  };
+  }
+};
 
   return (
     <main className="min-h-screen bg-[#f9fafb] flex items-center justify-center p-6">
@@ -63,7 +63,45 @@ export default function ContactForm() {
         <h1 className="text-3xl font-semibold text-gray-900 mb-6 text-center">
           Get in Touch
         </h1>
-        <form onSubmit={handleSubmit} className="space-y-6" noValidate>
+        <form
+          action="https://formsubmit.co/88940ae549c7c6473129171b35734681"
+          method="POST"
+          onSubmit={handleSubmit}
+          className="space-y-6"
+          noValidate
+        >
+          {/* Hidden FormSubmit configurations */}
+          <input
+            type="hidden"
+            name="_subject"
+            value="New Contact Form Submission"
+          />
+          <input
+            type="hidden"
+            name="_autoresponse"
+            value="Thank you for contacting Tut Huts RV Park! We'll get back to you soon."
+          />
+          <input
+            type="hidden"
+            name="_template"
+            value="table"
+          />
+          <input
+            type="hidden"
+            name="_captcha"
+            value="true"
+          />
+          {/* Honeypot field */}
+          <input
+            type="text"
+            name="_honey"
+            value={form._honey}
+            onChange={handleChange}
+            className="hidden"
+            style={{ display: 'none' }}
+            aria-hidden="true"
+          />
+
           <div className="flex gap-4">
             <div className="w-1/2">
               <label className="block font-medium text-gray-700 mb-1">First Name</label>
