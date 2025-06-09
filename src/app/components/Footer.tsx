@@ -45,9 +45,23 @@ export default function Footer() {
             <Image
               src="/images/facebook-icon.png"
               alt="facebook logo"
-              width={30}
-              height={30}
-              className="w-7 h-7"
+              width={50}
+              height={50}
+              className="w-10 h-10"
+            />
+          </a>
+          <a
+            href={config.RESERVATION_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:opacity-80 transition-opacity"
+          >
+            <Image
+              src="/images/campspot_img.jpg"
+              alt="Campspot logo"
+              width={1000}
+              height={1000}
+              className="w-19 h-10"
             />
           </a>
         </div>

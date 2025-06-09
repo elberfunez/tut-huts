@@ -31,7 +31,6 @@ const amenities = [
   { icon: TreePalm, label: 'Quiet, Shaded Spots' },
   { icon: Plug, label: '30/50 Amp Service' },
   { icon: Check, label: 'Full Hookup Sites (Water, Sewer, Electric)' },
-  // Added new amenities
   { icon: Flame, label: 'Fire Ring' },
   { icon: ShowerHead, label: '24/7 Bathhouse Access' },
   { icon: Snowflake, label: 'Ice Machines' },
@@ -47,12 +46,12 @@ export default function Amenities() {
       {/* Hero Section */}
       <section role="banner" className="relative h-64 w-full">
         <Image
-          src="/images/rv-amenities-hero.jpg"
+          src="/images/sitelot1.jpg"
           alt="Tut Huts RV Park Amenities"
           fill
           className="object-cover brightness-75"
         />
-        <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+        <div className="absolute inset-0 bg-opacity-40 flex items-center justify-center">
           <h1 className="text-white text-4xl md:text-5xl font-bold">Our Amenities</h1>
         </div>
       </section>
