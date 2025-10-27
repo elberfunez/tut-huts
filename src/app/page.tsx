@@ -27,7 +27,7 @@ export default function HomePage() {
 
   const testimonials: Testimonial[] = [
     {
-      quote: "We’ve been staying here for 2 months and it’s excellent! The price is super reasonable, it’s very quiet, beautiful forest, and spacious spots for the camper. Also has WiFi for those rainy days stuck inside. If you need an escape this is the perfect place!",
+      quote: "We’ve been staying here for 2 months and it’s excellent! The price is super reasonable, it’s very quiet, beautiful forest, and spacious spots for the camper. If you need an escape this is the perfect place!",
       name: "Brittany W.",
     },
     {

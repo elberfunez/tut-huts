@@ -1,20 +1,16 @@
 import Image from 'next/image';
 import {
   WashingMachine,
-  Wifi,
   Dog,
   Plug,
   Utensils,
   Car,
   TreePalm,
   Check,
-  Flame,
-  ShowerHead,
   ArrowRightCircle,
   ArrowLeftCircle,
   Cloud,
   Accessibility,
-  Snowflake,
 } from 'lucide-react';
 
 export const metadata = {
@@ -24,16 +20,12 @@ export const metadata = {
 
 const amenities = [
   { icon: WashingMachine, label: 'Laundry Facilities' },
-  { icon: Wifi, label: 'Free Wi-Fi' },
   { icon: Dog, label: 'Pet Friendly' },
   { icon: Utensils, label: 'Picnic Tables' },
   { icon: Car, label: 'Easy Highway Access' },
   { icon: TreePalm, label: 'Quiet, Shaded Spots' },
   { icon: Plug, label: '30/50 Amp Service' },
   { icon: Check, label: 'Full Hookup Sites (Water, Sewer, Electric)' },
-  { icon: Flame, label: 'Fire Ring' },
-  { icon: ShowerHead, label: '24/7 Bathhouse Access' },
-  { icon: Snowflake, label: 'Ice Machines' },
   { icon: ArrowRightCircle, label: 'Pull-through Sites' },
   { icon: ArrowLeftCircle, label: 'Back-in Sites' },
   { icon: Cloud, label: 'Shaded Sites' },
