@@ -22,7 +22,7 @@ export const metadata = {
     url: 'https://tuthutsrvpark.com/amenities',
     images: [
       {
-        url: '/images/sitelot1.jpg',
+        url: '/images/sitelot1.webp',
         width: 1200,
         height: 630,
         alt: 'Tut Huts RV Park Amenities',
@@ -54,7 +54,7 @@ export default function Amenities() {
       {/* Hero Section */}
       <section role="banner" className="relative h-64 w-full">
         <Image
-          src="/images/sitelot1.jpg"
+          src="/images/sitelot1.webp"
           alt="Tut Huts RV Park Amenities"
           fill
           className="object-cover brightness-75"
