@@ -1,0 +1,32 @@
+{
+  "name": "Tut Huts RV Park",
+  "short_name": "Tut Huts",
+  "description": "Premium RV park in Parrish, Alabama with full hookups and scenic camping",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#31b0b4",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/img_logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/img_logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["travel", "business"],
+  "screenshots": [
+    {
+      "src": "/images/droneshot1.png",
+      "sizes": "540x720",
+      "type": "image/png"
+    }
+  ]
+}

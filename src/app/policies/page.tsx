@@ -1,21 +1,47 @@
 'use client';
 
-import Head from "next/head";
 import { useState } from "react";
-
- const metadata = {
-  title: "Policies | Tut Huts RV Park",
-  description: "Read the Terms of Service and Cancellation Policy for Tut Huts RV Park in Parrish, Alabama.",
-};
 
 export default function Policies() {
     const [activeTab, setActiveTab] = useState<"terms" | "cancellation">("terms");
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'What is the cancellation policy?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Our cancellation policy varies based on stay length. Short-term stays require 7 days notice for full refund. Mid-term and long-term stays have different notice requirements.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Are pets allowed at Tut Huts RV Park?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes, Tut Huts RV Park is pet-friendly. Pets must be leashed and cleaned up after.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What are the quiet hours?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Quiet hours are from 9 PM to 5 AM.',
+        },
+      },
+    ],
+  };
+
   return (
     <>
-      <Head>
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
-      </Head>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
 
       <main className="min-h-screen bg-white text-gray-800 px-6 py-12 max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold mb-8 text-center">Policies</h1>

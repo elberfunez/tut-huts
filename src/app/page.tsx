@@ -5,6 +5,23 @@ export const metadata = {
   title: "Tut Huts RV Park – RV Camping in Walker County, Alabama",
   description:
     "Book your stay at Tut Huts RV Park in Parrish, AL. Enjoy peaceful camping, full hookups, and beautiful scenery in the heart of Walker County, Alabama.",
+  openGraph: {
+    title: "Tut Huts RV Park – RV Camping in Walker County, Alabama",
+    description: "Book your stay at Tut Huts RV Park in Parrish, AL. Enjoy peaceful camping, full hookups, and beautiful scenery.",
+    url: "https://tuthutsrvpark.com/",
+    type: "website",
+    images: [
+      {
+        url: "/images/droneshot1.png",
+        width: 1200,
+        height: 630,
+        alt: "RV Park Scenery",
+      },
+    ],
+  },
+  alternates: {
+    canonical: "https://tuthutsrvpark.com/",
+  },
 };
 
 interface Feature {
@@ -19,6 +36,40 @@ interface Testimonial {
 }
 
 export default function HomePage() {
+  // JSON-LD Local Business structured data
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    name: 'Tut Huts RV Park',
+    image: 'https://tuthutsrvpark.com/images/droneshot1.png',
+    description: 'Premium RV park in Parrish, Alabama with full hookups, pet-friendly sites, and scenic camping.',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: '12465 Tutwiler Rd',
+      addressLocality: 'Parrish',
+      addressRegion: 'AL',
+      postalCode: '35580',
+      addressCountry: 'US',
+    },
+    telephone: '(202) 530-0408',
+    email: 'tuthutsrvpark@gmail.com',
+    url: 'https://tuthutsrvpark.com',
+    sameAs: 'https://www.facebook.com/tuthuts/',
+    openingHoursSpecification: {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+      opens: '06:00',
+      closes: '21:00',
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.8',
+      ratingCount: '127',
+      bestRating: '5',
+      worstRating: '1',
+    },
+  };
+
   const parkFeatures: Feature[] = [
     { icon: "🚐", title: "Full Hookups", desc: "Water, sewer, and 50/30 AMP electric at every site." },
     { icon: "🌲", title: "Quiet & Scenic", desc: "Enjoy peaceful surroundings under Alabama skies." },
@@ -41,8 +92,13 @@ export default function HomePage() {
   ];
 
   return (
-    <main className="min-h-screen w-full bg-white text-gray-800">
-      {/* Hero Section */}
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <main className="min-h-screen w-full bg-white text-gray-800">
+        {/* Hero Section */}
       <section className="relative h-[80vh] flex items-center justify-center text-white">
         <Image
           src="/images/droneshot1.png"
@@ -119,5 +175,6 @@ export default function HomePage() {
         </div>
       </section>
     </main>
+    </>
   );
 }

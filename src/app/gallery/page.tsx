@@ -1,8 +1,24 @@
 import Image from 'next/image';
 
 export const metadata = {
-  title: 'Tut Huts RV Park Gallery Images',
-  description: 'Images of park, landscape, park amenities and features.',
+  title: 'Gallery | Tut Huts RV Park',
+  description: 'View stunning photos of Tut Huts RV Park including campgrounds, amenities, landscape, and facilities.',
+  openGraph: {
+    title: 'Gallery | Tut Huts RV Park',
+    description: 'View stunning photos of Tut Huts RV Park including campgrounds, amenities, landscape, and facilities.',
+    url: 'https://tuthutsrvpark.com/gallery',
+    images: [
+      {
+        url: '/images/sitelot1.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Tut Huts RV Park Gallery',
+      },
+    ],
+  },
+  alternates: {
+    canonical: 'https://tuthutsrvpark.com/gallery',
+  },
 };
 
 interface GalleryImage {

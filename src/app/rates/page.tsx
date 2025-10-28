@@ -1,5 +1,19 @@
 import { RESERVATION_URL } from '../../../config';
 
+export const metadata = {
+  title: 'RV Park Rates & Pricing | Tut Huts RV Park',
+  description:
+    'Affordable RV camping rates at Tut Huts RV Park in Parrish, AL. Nightly, weekly, and monthly rates with full hookups included. Book your stay today!',
+  openGraph: {
+    title: 'RV Park Rates & Pricing | Tut Huts RV Park',
+    description: 'Affordable RV camping rates at Tut Huts RV Park in Parrish, AL. Nightly, weekly, and monthly rates with full hookups included.',
+    url: 'https://tuthutsrvpark.com/rates',
+  },
+  alternates: {
+    canonical: 'https://tuthutsrvpark.com/rates',
+  },
+};
+
 export default function RatesPage() {
   const rates = [
     {

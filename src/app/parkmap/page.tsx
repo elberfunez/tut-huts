@@ -1,8 +1,16 @@
 import Image from 'next/image';
 
 export const metadata = {
-  title: 'Tut Huts RV Park Gallery Images',
-  description: 'Images of park, landscape, park amenities and features.',
+  title: 'Park Map | Tut Huts RV Park',
+  description: 'View the interactive map of Tut Huts RV Park in Parrish, AL. Find available sites and amenities locations.',
+  openGraph: {
+    title: 'Park Map | Tut Huts RV Park',
+    description: 'View the interactive map of Tut Huts RV Park in Parrish, AL.',
+    url: 'https://tuthutsrvpark.com/parkmap',
+  },
+  alternates: {
+    canonical: 'https://tuthutsrvpark.com/parkmap',
+  },
 };
 
 export default function ParkMap() {
