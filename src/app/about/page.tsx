@@ -5,6 +5,22 @@ export const metadata = {
   title: "About Tut Huts RV Park",
   description:
     "Learn more about Tut Huts RV Park in Parrish, Alabama – your peaceful camping destination.",
+  openGraph: {
+    title: "About Tut Huts RV Park",
+    description: "Learn more about Tut Huts RV Park in Parrish, Alabama – your peaceful camping destination.",
+    url: "https://tuthutsrvpark.com/about",
+    images: [
+      {
+        url: "/images/TutHutsSign.jpg",
+        width: 1200,
+        height: 480,
+        alt: "Tut Huts RV Park Scenic View",
+      },
+    ],
+  },
+  alternates: {
+    canonical: "https://tuthutsrvpark.com/about",
+  },
 };
 
 export default function AboutPage() {

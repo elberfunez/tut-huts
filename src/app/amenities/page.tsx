@@ -16,6 +16,22 @@ import {
 export const metadata = {
   title: 'Amenities | Tut Huts RV Park',
   description: 'Explore the full list of amenities offered at Tut Huts RV Park in Parrish, Alabama.',
+  openGraph: {
+    title: 'Amenities | Tut Huts RV Park',
+    description: 'Explore the full list of amenities offered at Tut Huts RV Park in Parrish, Alabama.',
+    url: 'https://tuthutsrvpark.com/amenities',
+    images: [
+      {
+        url: '/images/sitelot1.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Tut Huts RV Park Amenities',
+      },
+    ],
+  },
+  alternates: {
+    canonical: 'https://tuthutsrvpark.com/amenities',
+  },
 };
 
 const amenities = [

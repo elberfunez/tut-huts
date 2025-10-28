@@ -4,6 +4,22 @@ export const metadata = {
   title: "Explore Parrish, AL – Attractions Near Tut Huts RV Park",
   description:
     "Discover exciting local attractions near Tut Huts RV Park in Parrish, Alabama. Enjoy off-roading, kayaking, nature trails, boat launches, shopping, and great food—just minutes away!",
+  openGraph: {
+    title: "Explore Parrish, AL – Attractions Near Tut Huts RV Park",
+    description: "Discover exciting local attractions near Tut Huts RV Park in Parrish, Alabama.",
+    url: "https://tuthutsrvpark.com/explore",
+    images: [
+      {
+        url: "/images/bankhead-forest.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Bankhead National Forest near Tut Huts RV Park",
+      },
+    ],
+  },
+  alternates: {
+    canonical: "https://tuthutsrvpark.com/explore",
+  },
 };
 
 export default function ExplorePage() {
