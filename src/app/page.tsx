@@ -1,5 +1,6 @@
 import Image from "next/image";
 import * as config from '../../config';
+import { aggregateRating } from '@/lib/reviews';
 
 export const metadata = {
   title: "Tut Huts RV Park – RV Camping in Walker County, Alabama",
@@ -12,7 +13,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "/images/droneshot1.png",
+        url: "/images/droneshot1.webp",
         width: 1200,
         height: 630,
         alt: "RV Park Scenery",
@@ -41,7 +42,7 @@ export default function HomePage() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Tut Huts RV Park',
-    image: 'https://tuthutsrvpark.com/images/droneshot1.png',
+    image: 'https://tuthutsrvpark.com/images/droneshot1.webp',
     description: 'Premium RV park in Parrish, Alabama with full hookups, pet-friendly sites, and scenic camping.',
     address: {
       '@type': 'PostalAddress',
@@ -63,10 +64,7 @@ export default function HomePage() {
     },
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      ratingCount: '127',
-      bestRating: '5',
-      worstRating: '1',
+      ...aggregateRating,
     },
   };
 
@@ -101,7 +99,7 @@ export default function HomePage() {
         {/* Hero Section */}
       <section className="relative h-[80vh] flex items-center justify-center text-white">
         <Image
-          src="/images/droneshot1.png"
+          src="/images/droneshot1.webp"
           alt="RV Park Scenery"
           fill
           priority

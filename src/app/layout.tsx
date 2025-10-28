@@ -22,7 +22,7 @@ export const metadata = {
     type: 'website',
     images: [
       {
-        url: '/images/droneshot1.png',
+        url: '/images/droneshot1.webp',
         width: 1200,
         height: 630,
         alt: 'Tut Huts RV Park Aerial View',
@@ -34,7 +34,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Tut Huts RV Park | Full Hookup RV Camping in Parrish, AL',
     description: 'Premium RV park in Parrish, Alabama with full hookups, pet-friendly sites, and scenic camping.',
-    images: ['/images/droneshot1.png'],
+    images: ['/images/droneshot1.webp'],
   },
   robots: {
     index: true,
