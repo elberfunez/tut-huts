@@ -52,7 +52,7 @@ export default function HomePage() {
       postalCode: '35580',
       addressCountry: 'US',
     },
-    telephone: '(202) 530-0408',
+    telephone: '(205) 530-0408',
     email: 'tuthutsrvpark@gmail.com',
     url: 'https://tuthutsrvpark.com',
     sameAs: 'https://www.facebook.com/tuthuts/',
