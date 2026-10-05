@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import * as config from '../../config';
 import { aggregateRating } from '@/lib/reviews';
 
@@ -112,16 +113,11 @@ export default function HomePage() {
           <p className="mt-4 text-xl md:text-2xl font-light max-w-2xl mx-auto">
             Peaceful RV camping in the heart of Walker County, Alabama.
           </p>
-          <a
-            href={config.RESERVATION_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block mt-6"
-          >
+          <Link href={config.RESERVATION_URL} className="inline-block mt-6">
             <button className="bg-[#31b0b4] text-white font-bold py-3 px-8 rounded-full shadow-xl hover:bg-[#2a9ba0] hover:scale-105 transition-all duration-300 transform">
               Book Now
             </button>
-          </a>
+          </Link>
         </div>
       </section>
 

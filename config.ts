@@ -1,4 +1,4 @@
-export const RESERVATION_URL: string = 'https://www.campspot.com/book/tuthutsrvpark';
+export const RESERVATION_URL: string = '/book';
 export const PARK_ADDRESS: string = '12465 Tutwiler Rd, Parrish, AL 35580';
 export const PARK_PHONE_NUMBER: string = '(205) 530-0408';
 export const PARK_EMAIL: string = 'tuthutsrvpark@gmail.com';

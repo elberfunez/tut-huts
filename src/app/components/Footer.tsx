@@ -50,20 +50,6 @@ export default function Footer() {
               className="w-10 h-10"
             />
           </a>
-          <a
-            href={config.RESERVATION_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:opacity-80 transition-opacity"
-          >
-            <Image
-              src="/images/campspot_img.jpg"
-              alt="Campspot logo"
-              width={1000}
-              height={1000}
-              className="w-19 h-10"
-            />
-          </a>
         </div>
         <div className="space-x-1 mb-6">
           <Link
@@ -72,14 +58,12 @@ export default function Footer() {
           >
             Contact
           </Link>{""}|{" "}
-          <a
+          <Link
             href={config.RESERVATION_URL}
-            target="_blank"
-            rel="noopener noreferrer"
             className="hover:text-gray-300 transition-colors"
           >
             Book
-          </a>
+          </Link>
         </div>
         <p className="text-xs opacity-80">
           © {new Date().getFullYear()} Tut Huts RV Park. All Rights Reserved.

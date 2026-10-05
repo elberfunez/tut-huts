@@ -131,15 +131,13 @@ export default function Navbar2() {
                 </Link>
               )
             )}
-            <a
+            <Link
               href={RESERVATION_URL}
-              target="_blank"
-              rel="noopener noreferrer"
               className="bg-indigo-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-indigo-700"
               title="Reserve a stay at Tut Huts RV Park"
             >
               Book Now
-            </a>
+            </Link>
           </div>
 
           {/* Mobile toggle button */}
@@ -224,15 +222,13 @@ export default function Navbar2() {
               </Link>
             )
           )}
-          <a
+          <Link
             href={RESERVATION_URL}
-            target="_blank"
-            rel="noopener noreferrer"
             className="block text-center bg-indigo-600 text-white px-3 py-2 rounded-md text-base font-medium hover:bg-indigo-700"
             onClick={handleLinkClick}
           >
             Reserve
-          </a>
+          </Link>
         </div>
       )}
     </nav>
